@@ -1,0 +1,16 @@
+server:
+  AppVersion: 1.0.0
+  Port: :5000
+  Mode: Development
+
+postgres:
+  PostgresqlHost: localhost
+  PostgresqlPort: 5432
+  PostgresqlUser: postgres
+  PostgresqlPassword: postgres
+  PostgresqlDbname: txn_db
+  PostgresqlSslmode: disable
+  PgDriver: pgx
+
+
+
