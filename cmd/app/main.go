@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"os"
 	"pismo-ledger-service/config"
+	"pismo-ledger-service/internal/repository"
 	"pismo-ledger-service/pkg/log"
 	"pismo-ledger-service/pkg/postgres"
-	"pismo-ledger-service/pkg/repository"
 	"pismo-ledger-service/server"
 )
 

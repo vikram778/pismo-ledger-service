@@ -11,8 +11,8 @@ import (
 	"net/http"
 	"pismo-ledger-service/config"
 	"pismo-ledger-service/errs"
+	"pismo-ledger-service/internal/repository"
 	"pismo-ledger-service/pkg/log"
-	"pismo-ledger-service/pkg/repository"
 )
 
 const (

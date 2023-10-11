@@ -29,8 +29,10 @@ type PostgresConfig struct {
 func LoadConfig(filename string) (*viper.Viper, error) {
 	v := viper.New()
 
-	v.SetConfigName(filename)
-	v.AddConfigPath(".")
+	v.SetConfigName("config")
+	v.SetConfigFile(filename)
+	v.SetConfigType("yml")
+	v.AddConfigPath(filename)
 	v.AutomaticEnv()
 	if err := v.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
@@ -78,7 +80,7 @@ func GetConfig(configPath string) (*Config, error) {
 // GetConfigPath returns the config path of the file to be used for application
 func GetConfigPath(configPath string) string {
 	if configPath == "docker" {
-		return "./config/config-docker.yml"
+		return "config/config-docker.yml"
 	}
-	return "./config/config-local.yml"
+	return "config/config-local.yml"
 }
